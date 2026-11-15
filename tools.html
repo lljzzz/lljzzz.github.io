@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Volt · Tools</title>
+<meta name="description" content="All Volt tools explained: autoclicker, macros, snippets, clipboard history, notes, text tools, timers, screen capture, colour picker, Nudge and the command palette.">
+<meta name="theme-color" content="#0d0e10">
+<link rel="canonical" href="https://lljzzz.github.io/tools.html">
+<meta property="og:title" content="Volt · 10 apps in one">
+<meta property="og:description" content="Autoclicker, macros, text shortcuts, clipboard history and more. See Volt in action and try every theme and accent colour.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lljzzz.github.io/">
+<meta property="og:image" content="https://lljzzz.github.io/img/appearance-dark-orange.webp">
+<meta property="og:image:alt" content="Volt's autoclicker in the dark theme with orange controls.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css?v=0.8.1">
+<script src="site.js?v=0.8.1" defer></script>
+</head>
+<body><svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <symbol id="i-mouse" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="7"/><path d="M12 6v4"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+  <symbol id="i-keyboard" viewBox="0 0 24 24"><path d="M10 8h.01"/><path d="M12 12h.01"/><path d="M14 8h.01"/><path d="M16 12h.01"/><path d="M18 8h.01"/><path d="M6 8h.01"/><path d="M7 16h10"/><path d="M8 12h.01"/><rect width="20" height="16" x="2" y="4" rx="2"/></symbol>
+  <symbol id="i-clipboard" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24"><path d="M15.5 3H5a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V8.5L15.5 3Z"/><path d="M15 3v4a2 2 0 0 0 2 2h4"/></symbol>
+  <symbol id="i-type" viewBox="0 0 24 24"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" x2="15" y1="20" y2="20"/><line x1="12" x2="12" y1="4" y2="20"/></symbol>
+  <symbol id="i-timer" viewBox="0 0 24 24"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></symbol>
+  <symbol id="i-pipette" viewBox="0 0 24 24"><path d="m2 22 1-1h3l9-9"/><path d="M3 21v-3l9-9"/><path d="m15 6 3.4-3.4a2.1 2.1 0 1 1 3 3L18 9l.4.4a2.1 2.1 0 1 1-3 3l-3.8-3.8a2.1 2.1 0 1 1 3-3l.4.4Z"/></symbol>
+  <symbol id="i-move" viewBox="0 0 24 24"><polyline points="5 9 2 12 5 15"/><polyline points="9 5 12 2 15 5"/><polyline points="15 19 12 22 9 19"/><polyline points="19 9 22 12 19 15"/><line x1="2" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="22"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></symbol>
+  <symbol id="i-wifi-off" viewBox="0 0 24 24"><line x1="2" x2="22" y1="2" y2="22"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.82a15 15 0 0 1 4.17-2.65"/><path d="M10.66 5c4.01-.36 8.14.9 11.34 3.76"/><path d="M16.85 11.25a10 10 0 0 1 2.22 1.68"/><path d="M5 13a10 10 0 0 1 5.24-2.76"/><line x1="12" x2="12.01" y1="20" y2="20"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol>
+  <symbol id="i-usb" viewBox="0 0 24 24"><circle cx="10" cy="7" r="1"/><circle cx="4" cy="20" r="1"/><path d="M4.7 19.3 19 5"/><path d="m21 3-3 1 2 2Z"/><path d="M9.26 7.68 5 12l2 5"/><path d="m10 14 5 2 3.5-3.5"/><path d="m18 12 1-1 1 1-1 1Z"/></symbol>
+  <symbol id="i-archive" viewBox="0 0 24 24"><rect width="20" height="5" x="2" y="3" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><path d="M10 12h4"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+  <symbol id="i-user-x" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" x2="22" y1="8" y2="13"/><line x1="22" x2="17" y1="8" y2="13"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></symbol>
+  <symbol id="i-layout" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M12 3v18"/><path d="M3 12h9"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></symbol>
+</svg><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="wrap">
+  <a class="brand" href="./" aria-label="Volt home"><img src="favicon.svg" alt="" width="28" height="28">VOLT</a>
+  <nav class="nav" aria-label="Main"><a href="./#palette">Palette</a><a href="tools.html" aria-current="page">Tools</a><a href="./#appearance">Appearance</a><a href="./#faq">Q&amp;A</a></nav>
+  <a class="btn btn-primary btn-sm" href="./#download">Download</a>
+</div></header><main id="main" tabindex="-1">  <section class="section tools-page" id="tools" aria-labelledby="tools-title">
+    <div class="wrap">
+      <a class="back-link" href="./"><span aria-hidden="true">←</span> Back to the main page</a>
+      <div class="section-head">
+        <h1 id="tools-title">Tools in Volt</h1>
+        <p>Features, shortcuts and screenshots for all ten tools.</p>
+      </div>
+
+      <p class="note"><a href="#palette">Jump to command palette details</a></p>
+      <nav class="index" aria-label="Tools in Volt">
+      <div class="index-group">
+        <p class="group-label" id="ix-automate">Automate</p>
+        <ul aria-labelledby="ix-automate">
+        <li><a href="#autoclicker"><svg class="icon" aria-hidden="true"><use href="#i-mouse"/></svg>Autoclicker</a></li>
+        <li><a href="#macros"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg>Macros</a></li>
+        <li><a href="#snippets"><svg class="icon" aria-hidden="true"><use href="#i-keyboard"/></svg>Snippets</a></li>
+        </ul>
+      </div>
+      <div class="index-group">
+        <p class="group-label" id="ix-productivity">Productivity</p>
+        <ul aria-labelledby="ix-productivity">
+        <li><a href="#clipboard"><svg class="icon" aria-hidden="true"><use href="#i-clipboard"/></svg>Clipboard history</a></li>
+        <li><a href="#notes"><svg class="icon" aria-hidden="true"><use href="#i-note"/></svg>Notes</a></li>
+        <li><a href="#text-tools"><svg class="icon" aria-hidden="true"><use href="#i-type"/></svg>Text tools</a></li>
+        <li><a href="#timers"><svg class="icon" aria-hidden="true"><use href="#i-timer"/></svg>Timers</a></li>
+        </ul>
+      </div>
+      <div class="index-group">
+        <p class="group-label" id="ix-screen">Screen</p>
+        <ul aria-labelledby="ix-screen">
+        <li><a href="#capture"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg>Screen capture</a></li>
+        <li><a href="#picker"><svg class="icon" aria-hidden="true"><use href="#i-pipette"/></svg>Color picker</a></li>
+        <li><a href="#nudge"><svg class="icon" aria-hidden="true"><use href="#i-move"/></svg>Nudge</a></li>
+        </ul>
+      </div>
+      </nav>
+
+      <section class="group" aria-labelledby="g-automate">
+        <div class="group-head"><h2 class="group-label" id="g-automate">Automate</h2></div>
+        <div class="features">
+
+          <article class="feature" id="autoclicker" aria-labelledby="t-autoclicker">
+            <div class="feature-copy">
+              <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-mouse"/></svg></span><h3 id="t-autoclicker">Autoclicker</h3></div>
+              <p class="lede">Clicks at any rate you set, in place or through a list of points.</p>
+              <ul class="facts">
+                <li>Clicks per second, minute or hour, or an exact interval.</li>
+                <li>Humanized timing that varies each click while the average stays on target.</li>
+                <li><strong>Sequences:</strong> mark points with <kbd>F7</kbd>, finish with <kbd>F8</kbd>, and Volt clicks or drags through them in order.</li>
+                <li><strong>Failsafes:</strong> only click in a chosen window, or stop when focus changes.</li>
+              </ul>
+              <p class="hotkey-line">Toggle with <span class="keys"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Y</kbd></span>, or hold to click.</p>
+            </div>
+            <figure class="feature-shot">
+              <a class="window shot" href="img/autoclicker.webp" data-zoom data-caption="Volt 0.8 · Tool screenshot"><img src="img/autoclicker.webp" width="1400" height="947" loading="lazy"
+                alt="Volt's Autoclicker page set to 25 clicks per second with Ctrl+Y as the hotkey, speed variation switched on, and options for mouse shake, double click and stop after 1000 clicks."></a>
+            </figure>
+          </article>
+
+          <article class="feature flip" id="macros" aria-labelledby="t-macros">
+            <div class="feature-copy">
+              <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg></span><h3 id="t-macros">Macros</h3></div>
+              <p class="lede">Record keyboard and mouse input, edit it step by step, replay it with a hotkey.</p>
+              <ul class="facts">
+                <li>Change delays, keys and positions, or reorder steps after recording.</li>
+                <li>Repeat, loop, or play at 0.1x to 10x speed.</li>
+                <li>Keys are sent as hardware scan codes, so they work in many games.</li>
+                <li>Stopping a macro always releases every key it was holding.</li>
+              </ul>
+            </div>
+            <figure class="feature-shot">
+              <a class="window shot" href="img/macros.webp" data-zoom data-caption="Volt 0.8 · Tool screenshot"><img src="img/macros.webp" width="1400" height="1045" loading="lazy"
+                alt="Volt's Macros page with three saved macros and the editor open on one called Walk loop, triggered by F6, showing steps like Key down W, Wait 180 ms, Key up W."></a>
+            </figure>
+          </article>
+
+          <article class="feature" id="snippets" aria-labelledby="t-snippets">
+            <div class="feature-copy">
+              <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-keyboard"/></svg></span><h3 id="t-snippets">Snippets</h3></div>
+              <p class="lede">Type a short trigger anywhere and Volt replaces it with the full text.</p>
+              <dl class="example">
+                <dt>You type</dt><dd><code>;addr</code></dd>
+                <dt>You get</dt><dd>your full address</dd>
+              </dl>
+              <ul class="facts">
+                <li>Placeholders for <code>{date}</code>, <code>{time}</code>, <code>{clipboard}</code> and where the cursor lands.</li>
+                <li>Multi-line snippets are pasted, not typed, so chat apps don't send half a message.</li>
+                <li>Works with international keyboards, including AltGr characters.</li>
+              </ul>
+            </div>
+            <figure class="feature-shot">
+              <a class="window shot" href="img/snippets.webp" data-zoom data-caption="Volt 0.8 · Tool screenshot"><img src="img/snippets.webp" width="1400" height="1045" loading="lazy"
+                alt="Volt's Snippets page listing triggers such as ;date, ;time, ;clip, ;shrug and ;sig, with the editor showing ;date expanding to today's date."></a>
+            </figure>
+          </article>
+        </div>
+      </section>
+
+      <section class="group" aria-labelledby="g-productivity">
+        <div class="group-head"><h2 class="group-label" id="g-productivity">Productivity</h2></div>
+        <div class="features">
+          <article class="feature flip" id="clipboard" aria-labelledby="t-clipboard">
+            <div class="feature-copy">
+              <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-clipboard"/></svg></span><h3 id="t-clipboard">Clipboard history</h3></div>
+              <p class="lede">Copied text and images, searchable, with pins for the things you paste often.</p>
+              <ul class="facts">
+                <li>Pins survive restarts. Optional history saving keeps text and unpinned images up to 12 MB each.</li>
+                <li>Copied images and screenshots show up with thumbnails. Save one as a PNG or float it on top of your other windows.</li>
+                <li>By default, skips copies that password managers mark as private.</li>
+                <li>Copy text as UPPER, camelCase, Base64, pretty JSON and 21 more formats.</li>
+              </ul>
+              <p class="hotkey-line"><span class="keys"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>V</kbd></span> pastes as plain text.</p>
+            </div>
+            <figure class="feature-shot">
+              <a class="window shot" href="img/clipboard-dark.webp" data-zoom data-caption="Volt 0.8 · Tool screenshot"><img src="img/clipboard-dark.webp" width="1400" height="758" loading="lazy"
+                alt="Volt's Clipboard page with a copied chart selected and shown in the preview, text entries below it, a pinned color code and buttons to copy, pin, delete, save as PNG or float the image."></a>
+              <figcaption>Image history is new in 0.8.</figcaption>
+            </figure>
+          </article>
+        </div>
+
+        <div class="cards three">
+          <article class="card" id="notes" aria-labelledby="t-notes">
+            <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-note"/></svg></span><h3 id="t-notes">Notes</h3></div>
+            <p>Plain-text notes that save as you type. The first line is the title. Type <code>note: buy milk</code> in the palette to add one.</p>
+          </article>
+          <article class="card" id="text-tools" aria-labelledby="t-text">
+            <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-type"/></svg></span><h3 id="t-text">Text tools</h3></div>
+            <p>Change case, sort lines, encode Base64 or URLs, format JSON and hash text. Also makes UUIDs, timestamps and strong passwords.</p>
+          </article>
+          <article class="card" id="timers" aria-labelledby="t-timers">
+            <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-timer"/></svg></span><h3 id="t-timers">Timers</h3></div>
+            <p>Presets, durations like <code>1h30</code>, or an alarm at a set time. You get a notification and a beep, even with the window closed. Stopwatch included.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="group" aria-labelledby="g-screen">
+        <div class="group-head"><h2 class="group-label" id="g-screen">Screen</h2></div>
+        <div class="features">
+          <article class="feature" id="capture" aria-labelledby="t-capture">
+            <div class="feature-copy">
+              <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg></span><h3 id="t-capture">Screen capture</h3></div>
+              <p class="lede">Freeze the screen, drag a region, and the shot is on your clipboard and saved as a PNG.</p>
+              <ul class="facts">
+                <li>Full screen and 3-second delay captures too.</li>
+                <li>Pin a capture on top of everything to use as a reference.</li>
+                <li>Correct on multiple monitors and scaled displays.</li>
+              </ul>
+              <p class="hotkey-line"><span class="keys"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>X</kbd></span> from anywhere.</p>
+            </div>
+            <figure class="feature-shot">
+              <a class="window shot" href="img/capture.webp" data-zoom data-caption="Volt 0.8 · Tool screenshot"><img src="img/capture.webp" width="1400" height="943" loading="lazy"
+                alt="Volt's Screen capture page with buttons for region, full screen, delayed and pinned captures, the Ctrl+Shift+X hotkey, save settings and recent capture thumbnails."></a>
+            </figure>
+          </article>
+        </div>
+
+        <div class="cards two">
+          <article class="card" id="picker" aria-labelledby="t-picker">
+            <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-pipette"/></svg></span><h3 id="t-picker">Color picker</h3></div>
+            <p>Pick any color on screen with a pixel magnifier and copy it as HEX, RGB or HSL.</p>
+            <p class="hotkey-line"><span class="keys"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>C</kbd></span></p>
+          </article>
+          <article class="card" id="nudge" aria-labelledby="t-nudge">
+            <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-move"/></svg></span><h3 id="t-nudge">Nudge</h3></div>
+            <p>Move the cursor or the active window by exact pixel steps from the keyboard, jump to saved spots, and snap windows to halves or quarters.</p>
+            <p class="hotkey-line"><span class="keys"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>Arrows</kbd></span> cursor · <span class="keys"><kbd>Win</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>Arrows</kbd></span> window</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section" id="palette" aria-labelledby="palette-title">
+    <div class="wrap palette-grid">
+      <div>
+        <div class="section-head">
+          <h2 id="palette-title">Command palette</h2>
+          <p>Press <span class="keys"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>Space</kbd></span> in any app, type a few letters, press Enter.</p>
+        </div>
+        <ul class="uses">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg><span>Run a macro</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-clipboard"/></svg><span>Paste a snippet or an old clipboard item into the app you're in</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-timer"/></svg><span>Start a timer or take a screenshot</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-layout"/></svg><span>Snap a window to a half, a quarter or the center</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-calc"/></svg><span>Do quick math, or type <code>note: buy milk</code> to save a note</span></li>
+        </ul>
+      </div>
+      <figure class="palette-figure">
+        <img src="img/palette-calculator.webp" width="1240" height="214" loading="lazy"
+          alt="The palette with (1299 * 0.24) / 12 typed in and the result 25.98 ready to paste.">
+        <ul class="key-hints" aria-label="Palette keys">
+          <li><kbd>↑</kbd><kbd>↓</kbd> navigate</li>
+          <li><kbd>Enter</kbd> run or paste</li>
+          <li><span class="keys"><kbd>Shift</kbd><span class="plus">+</span><kbd>Enter</kbd></span> copy</li>
+          <li><kbd>Esc</kbd> close</li>
+        </ul>
+      </figure>
+    </div>
+  </section>
+
+<div class="wrap back-bottom"><a class="back-link" href="./"><span aria-hidden="true">←</span> Back to the main page</a></div>
+</main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="./#top" aria-label="Volt home"><img src="favicon.svg" alt="" width="28" height="28">VOLT</a>
+        <p>10 apps in one.<br>Free and open source.</p>
+      </div>
+      <nav aria-labelledby="f-product">
+        <h2 id="f-product">Product</h2>
+        <ul>
+          <li><a href="tools.html">All tools</a></li>
+          <li><a href="./#palette">Command palette</a></li>
+        <li><a href="./#hotkeys">Hotkeys</a></li>
+          <li><a href="./#download">Download</a></li>
+          <li><a href="./#faq">Q&amp;A</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-project">
+        <h2 id="f-project">Project</h2>
+        <ul>
+          <li><a href="https://github.com/lljzzz/volt">Source code</a></li>
+          <li><a href="https://github.com/lljzzz/volt/releases">Releases</a></li>
+          <li><a href="https://github.com/lljzzz/volt/issues">Report a problem</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-legal">
+        <h2 id="f-legal">Legal</h2>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="https://github.com/lljzzz/volt/blob/main/LICENSE">MIT License</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>Volt 0.8 · Made by <a href="https://github.com/lljzzz">lljzzz</a></span>
+      <span>Not affiliated with Microsoft. Windows is a trademark of Microsoft Corporation.</span>
+    </div>
+  </div>
+</footer><dialog id="screenshot-dialog" aria-labelledby="screenshot-title">
+  <div class="dialog-bar"><p id="screenshot-title">Volt screenshot</p><button type="button" id="close-screenshot" aria-label="Close screenshot">Close <span aria-hidden="true">×</span></button></div>
+  <img id="screenshot-image" alt="">
+  <p class="dialog-note"><a id="screenshot-original" href="img/appearance-dark-orange.webp" target="_blank" rel="noopener">Open full-size image</a></p>
+</dialog></body></html>

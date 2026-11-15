@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; media-src 'self'; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>Volt · Autoclicker, macros and everyday Windows tools</title>
+<title>Volt</title>
 <meta name="description" content="Automate clicks, expand text shortcuts, retrieve copied text and images, and capture your screen. Volt is a free, open source Windows app. No account or installer needed.">
 <meta name="theme-color" content="#0d0e10">
 <link rel="canonical" href="https://lljzzz.github.io/">
-<meta property="og:title" content="Volt · Everyday Windows tools in one app">
+<meta property="og:title" content="Volt · 10 apps in one">
 <meta property="og:description" content="Autoclicker, macros, text shortcuts, clipboard history and more. See Volt in action and try every theme and accent colour.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lljzzz.github.io/">
@@ -18,8 +18,8 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="styles.css">
-<script src="site.js" defer></script>
+<link rel="stylesheet" href="styles.css?v=0.8.1">
+<script src="site.js?v=0.8.1" defer></script>
 </head>
 <body>
 <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
@@ -47,63 +47,59 @@
 </svg>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header"><div class="wrap">
-  <a class="brand" href="#top" aria-label="Volt home"><img src="favicon.svg" alt="" width="28" height="28">VOLT</a>
-  <nav class="nav" aria-label="Main"><a href="#demos">See it work</a><a href="#appearance">Appearance</a><a href="#tools">Tools</a><a href="#faq">FAQ</a></nav>
+  <a class="brand" href="./" aria-label="Volt home"><img src="favicon.svg" alt="" width="28" height="28">VOLT</a>
+  <nav class="nav" aria-label="Main"><a href="#palette">Palette</a><a href="#tools">Tools</a><a href="#appearance">Appearance</a><a href="#faq">Q&amp;A</a></nav>
   <a class="btn btn-primary btn-sm" href="#download">Download</a>
-</div></header>
-<main id="main" tabindex="-1">
-  <section class="hero" id="top"><div class="wrap">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Free &amp; open source · Windows 10 / 11</p>
-        <h1>Autoclicker, macros,<br> clipboard history.<br> <span>All in one app.</span></h1>
-        <p class="lede">Automate repeated clicks, turn shortcuts into full messages, and find text or images you copied earlier. Volt keeps your everyday tools together.</p>
-        <div class="hero-actions"><a class="btn btn-primary" href="https://github.com/lljzzz/volt/releases/latest/download/Volt.exe">Download Volt.exe</a><a class="btn btn-ghost" href="#demos">See it work</a></div>
-        <p class="hero-meta">v0.8 · 25.4 MB · 64-bit Windows · no installer</p>
-        <p class="hero-note">No account required. Your clipboard history, notes and settings stay on your PC.</p>
-      </div>
-      <figure class="hero-preview">
-        <a href="img/appearance-dark-orange.webp" data-zoom data-caption="Volt 0.8 · Dark theme, Orange accent" aria-label="Enlarge the Volt app screenshot"><img src="img/appearance-dark-orange.webp" width="1600" height="1085" fetchpriority="high" alt="The Volt autoclicker with a sidebar of tools, rate controls, a Start button and click behaviour settings."></a>
-        <figcaption>Volt 0.8, dark theme. <a href="#appearance">Try the other colours below.</a></figcaption>
+</div></header><main id="main" tabindex="-1"><section class="hero" id="top"><div class="wrap">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <h1>VOLT<svg class="bolt-mark" viewBox="4.6 2.2 14.8 19.6" aria-hidden="true" focusable="false">
+          <path class="bolt-fill" d="M13.2 3.2 5.6 13.4h5.8l-.8 7.4 7.8-10.2h-5.8z"/>
+          <path class="bolt-echo" d="M13.2 3.2 5.6 13.4h5.8l-.8 7.4 7.8-10.2h-5.8z" transform="translate(.5 .5)"/>
+          <path class="bolt-line" d="M13.2 3.2 5.6 13.4h5.8l-.8 7.4 7.8-10.2h-5.8z" pathLength="1"/>
+        </svg></h1><p class="hero-tagline">10 apps in one.</p>
+      <p class="hero-description">Free, open source tools for Windows.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="#download">Download</a><a class="btn btn-ghost" href="#tools">See the tools</a></div>
+      <p class="hero-meta">Windows 10 / 11 · 64-bit · no installer</p>
+    </div>
+    <div class="hero-visual"><figure class="hero-stack">
+        <a class="hero-dashboard" href="img/dashboard.webp" data-zoom data-caption="Volt 0.8 · Dashboard" aria-label="Enlarge the Volt Dashboard"><img src="img/dashboard.webp" width="2000" height="990" fetchpriority="high" alt="The Volt Dashboard, showing tools, status and hotkey controls."></a>
+        <img class="hero-palette" src="img/palette.webp" width="1240" height="940" alt="The command palette, searching clipboard entries and actions.">
+        <figcaption><a href="#palette"><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Space</kbd></a> opens the command palette.</figcaption>
       </figure>
     </div>
-    <p class="release-line"><span class="release-label">New in 0.8</span> Clipboard images, a light theme and five accent colours. <a href="https://github.com/lljzzz/volt/releases/tag/v0.8">Release notes <span aria-hidden="true">↗</span></a></p>
-  </div></section>
-
-  <section class="section band" id="demos" aria-labelledby="demos-title"><div class="wrap">
-    <div class="section-head"><p class="eyebrow">A few things you can do</p><h2 id="demos-title">See what happens after the shortcut.</h2><p>Three short demos using Volt, with example text and images. Pick one and press play.</p></div>
-    <div class="demo-tabs" role="group" aria-label="Choose a demo" hidden>
-      <button type="button" aria-pressed="true" aria-controls="demo-snippets" data-demo="snippets">01 <span>Expand a snippet</span></button>
-      <button type="button" aria-pressed="false" aria-controls="demo-clipboard" data-demo="clipboard">02 <span>Find a copied image</span></button>
-      <button type="button" aria-pressed="false" aria-controls="demo-timer" data-demo="timer">03 <span>Start a timer</span></button>
-    </div>
-    <div class="demo-stage"><figure class="demo-panel" id="demo-snippets" aria-labelledby="demo-title-snippets">
-      <div class="demo-heading"><h3 id="demo-title-snippets">A signature in four characters</h3><p>Save a signature as ;sig, then type the trigger in a message. Volt replaces it with the full text, including line breaks.</p></div>
-      <video controls muted playsinline preload="none" width="1280" height="920" poster="img/demo-snippets.webp" aria-label="Snippet settings, followed by an example message where ;sig expands into a three-line signature.">
-        <source src="media/demo-snippets.mp4" type="video/mp4">
-        <p><a href="media/demo-snippets.mp4">Watch the snippets demo</a>.</p>
-      </video>
-      <figcaption>Snippet settings, followed by an example message where ;sig expands into a three-line signature. No audio.</figcaption>
-    </figure><figure class="demo-panel" id="demo-clipboard" aria-labelledby="demo-title-clipboard">
-      <div class="demo-heading"><h3 id="demo-title-clipboard">Get back an image you copied</h3><p>Copying a new message doesn't have to lose the image before it. Find the earlier image, copy it back, and use it in a document.</p></div>
-      <video controls muted playsinline preload="none" width="1280" height="920" poster="img/demo-clipboard.webp" aria-label="Clipboard history filtered to images, with an earlier chart selected, copied and inserted into an example document.">
-        <source src="media/demo-clipboard.mp4" type="video/mp4">
-        <p><a href="media/demo-clipboard.mp4">Watch the clipboard demo</a>.</p>
-      </video>
-      <figcaption>Clipboard history filtered to images, with an earlier chart selected, copied and inserted into an example document. No audio.</figcaption>
-    </figure><figure class="demo-panel" id="demo-timer" aria-labelledby="demo-title-timer">
-      <div class="demo-heading"><h3 id="demo-title-timer">Start a timer from the keyboard</h3><p>Press Ctrl+Alt+Space, type timer 10m, and press Enter. The timer runs while you get on with something else.</p></div>
-      <video controls muted playsinline preload="none" width="1280" height="920" poster="img/demo-timer.webp" aria-label="The palette searches for timer 10m, then the Timers page shows the newly started ten-minute timer.">
-        <source src="media/demo-timer.mp4" type="video/mp4">
-        <p><a href="media/demo-timer.mp4">Watch the timer demo</a>.</p>
-      </video>
-      <figcaption>The palette searches for timer 10m, then the Timers page shows the newly started ten-minute timer. No audio.</figcaption>
-    </figure></div>
-    <p class="note">Open search with <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Space</kbd>. You can also run macros, save notes, do quick maths and snap windows from there.</p>
-  </div></section>
-
-  <section class="section" id="appearance" aria-labelledby="appearance-title"><div class="wrap">
-    <div class="section-head"><p class="eyebrow">Appearance</p><h2 id="appearance-title">Your theme. Your colour.</h2><p>Choose Dark or Light, or let Volt follow your Windows theme. Pick an accent to see how the app looks.</p></div>
+  </div><p class="release-line"><span class="release-label">New in 0.8</span> Clipboard images, a light theme and five accent colours. <a href="https://github.com/lljzzz/volt/releases/tag/v0.8">Release notes <span aria-hidden="true">↗</span></a></p>
+</div></section><section class="section band" id="palette" aria-labelledby="palette-title"><div class="wrap palette-layout">
+  <div class="palette-copy"><h2 id="palette-title">Command palette</h2>
+    <p>Press <span class="keys"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>Space</kbd></span> in any app. Search, then press Enter.</p>
+    <p>Run a macro, paste a snippet or an earlier copy, start a timer, or snap a window into place.</p>
+    <dl class="palette-examples"><dt><code>timer 10m</code></dt><dd>Start a ten-minute timer</dd><dt><code>1299 * 0.24 / 12</code></dt><dd>Calculate and copy the result</dd><dt><code>note: buy milk</code></dt><dd>Save a quick note</dd></dl>
+    <a href="tools.html#palette">More about the palette <span aria-hidden="true">→</span></a>
+  </div>
+  <figure class="palette-preview motion-demo">
+    <img class="animated-demo" src="img/palette-demo-poster.webp" data-animation="img/palette-demo.png" data-poster="img/palette-demo-poster.webp" width="1240" height="940" loading="lazy" alt="The command palette searching for a timer, doing a calculation, finding copied images, saving a note and snapping a window.">
+    <figcaption><span><kbd>Enter</kbd> run or paste · <kbd>Shift</kbd> + <kbd>Enter</kbd> copy</span></figcaption>
+  </figure>
+</div></section><section class="section" id="demos" aria-labelledby="demos-title"><div class="wrap">
+  <div class="section-head"><h2 id="demos-title">See it in use</h2></div>
+  <div class="demo-tabs" role="group" aria-label="Choose a demo" hidden>
+    <button type="button" data-demo="snippets" aria-pressed="true" aria-controls="demo-snippets">Expand a snippet</button>
+    <button type="button" data-demo="clipboard" aria-pressed="false" aria-controls="demo-clipboard">Find an image</button>
+    <button type="button" data-demo="timer" aria-pressed="false" aria-controls="demo-timer">Start a timer</button>
+  </div><div class="demo-stage"><figure class="demo-panel motion-demo" id="demo-snippets" aria-labelledby="demo-title-snippets">
+      <div class="demo-heading"><h3 id="demo-title-snippets">Typing ;sig inserts your signature.</h3><p>Save text you use often, then insert it with a short trigger.</p></div>
+      <img class="animated-demo" src="img/demo-snippets.webp" data-animation="img/demo-snippets.gif" data-poster="img/demo-snippets.webp" width="1280" height="920" loading="lazy" alt="GIF: ;sig is typed into an example message and replaced with a three-line signature.">
+      <figcaption><span>Recorded with example data.</span><noscript><a href="img/demo-snippets.gif">Watch the GIF</a></noscript></figcaption>
+    </figure><figure class="demo-panel motion-demo" id="demo-clipboard" aria-labelledby="demo-title-clipboard">
+      <div class="demo-heading"><h3 id="demo-title-clipboard">Find the image you copied earlier.</h3><p>Search your history, copy the image back, and paste it into a document.</p></div>
+      <img class="animated-demo" src="img/demo-clipboard.webp" data-animation="img/demo-clipboard.gif" data-poster="img/demo-clipboard.webp" width="1280" height="920" loading="lazy" alt="GIF: an earlier chart is selected in clipboard history, copied and pasted into an example document.">
+      <figcaption><span>Recorded with example data.</span><noscript><a href="img/demo-clipboard.gif">Watch the GIF</a></noscript></figcaption>
+    </figure><figure class="demo-panel motion-demo" id="demo-timer" aria-labelledby="demo-title-timer">
+      <div class="demo-heading"><h3 id="demo-title-timer">Start a timer from the palette.</h3><p>Type timer 10m and press Enter. The countdown starts straight away.</p></div>
+      <img class="animated-demo" src="img/demo-timer.webp" data-animation="img/demo-timer.gif" data-poster="img/demo-timer.webp" width="1280" height="920" loading="lazy" alt="GIF: the command palette starts a ten-minute timer, which counts down from 10:00 to 9:57.">
+      <figcaption><span>Recorded with example data.</span><noscript><a href="img/demo-timer.gif">Watch the GIF</a></noscript></figcaption>
+    </figure></div></div></section>  <section class="section band" id="appearance" aria-labelledby="appearance-title"><div class="wrap">
+    <div class="section-head"><h2 id="appearance-title">Themes &amp; accents</h2><p>Choose Dark or Light, or let Volt follow your Windows theme. Try the five accents below.</p></div>
     <div class="appearance-controls" hidden>
       <fieldset><legend>Theme</legend><div class="choices theme-choices">
         <label><input type="radio" name="theme" value="dark" checked><span>Dark</span></label>
@@ -118,44 +114,44 @@
       </div></fieldset>
     </div>
     <figure class="appearance-preview">
-      <a id="appearance-link" href="img/appearance-dark-orange.webp" data-zoom data-caption="Volt 0.8 · Dark theme, Orange accent" aria-label="Enlarge the selected appearance screenshot"><img id="appearance-image" src="img/appearance-dark-orange.webp" width="1600" height="1085" loading="lazy" decoding="async" alt="Volt's autoclicker in the Dark theme with the Orange accent."></a>
-      <figcaption><span id="appearance-caption" role="status" aria-live="polite">Dark theme · Orange accent</span><span>Click the screenshot to enlarge. Change these in Settings → Appearance.</span></figcaption>
-    </figure>
+      <a id="appearance-link" href="img/appearance-dark-orange.webp" data-zoom data-caption="Volt 0.8 · Dark theme, Orange accent" aria-label="Enlarge the selected appearance screenshot"><span class="appearance-stage"><img class="appearance-frame is-current" data-theme="dark" data-accent="orange" src="img/appearance-dark-orange.webp" width="1600" height="1085" loading="lazy" decoding="async" aria-hidden="false" alt="Volt in the Dark theme with the Orange accent."><img class="appearance-frame" data-theme="dark" data-accent="blue" src="img/appearance-dark-blue.webp" width="1600" height="1085" loading="lazy" decoding="async" aria-hidden="true" alt="Volt in the Dark theme with the Blue accent."><img class="appearance-frame" data-theme="dark" data-accent="teal" src="img/appearance-dark-teal.webp" width="1600" height="1085" loading="lazy" decoding="async" aria-hidden="true" alt="Volt in the Dark theme with the Teal accent."><img class="appearance-frame" data-theme="dark" data-accent="pink" src="img/appearance-dark-pink.webp" width="1600" height="1085" loading="lazy" decoding="async" aria-hidden="true" alt="Volt in the Dark theme with the Pink accent."><img class="appearance-frame" data-theme="dark" data-accent="violet" src="img/appearance-dark-violet.webp" width="1600" height="1085" loading="lazy" decoding="async" aria-hidden="true" alt="Volt in the Dark theme with the Violet accent."><img class="appearance-frame" data-theme="light" data-accent="orange" src="img/appearance-light-orange.webp" width="1600" height="1085" loading="lazy" decoding="async" aria-hidden="true" alt="Volt in the Light theme with the Orange accent."><img class="appearance-frame" data-theme="light" data-accent="blue" src="img/appearance-light-blue.webp" width="1600" height="1085" loading="lazy" decoding="async" aria-hidden="true" alt="Volt in the Light theme with the Blue accent."><img class="appearance-frame" data-theme="light" data-accent="teal" src="img/appearance-light-teal.webp" width="1600" height="1085" loading="lazy" decoding="async" aria-hidden="true" alt="Volt in the Light theme with the Teal accent."><img class="appearance-frame" data-theme="light" data-accent="pink" src="img/appearance-light-pink.webp" width="1600" height="1085" loading="lazy" decoding="async" aria-hidden="true" alt="Volt in the Light theme with the Pink accent."><img class="appearance-frame" data-theme="light" data-accent="violet" src="img/appearance-light-violet.webp" width="1600" height="1085" loading="lazy" decoding="async" aria-hidden="true" alt="Volt in the Light theme with the Violet accent."></span></a>
+      <figcaption><span id="appearance-caption" role="status" aria-live="polite">Dark theme · Orange accent</span><span class="appearance-hint">Change these in Settings → Appearance. Click to enlarge.</span></figcaption>
+    </figure><p id="appearance-error" class="note" role="alert" hidden></p>
     <noscript><p class="note"><a href="img/accents.webp">View all five accents in both themes</a>.</p></noscript>
   </div></section>
 
-  <section class="section band" id="tools" aria-labelledby="tools-title"><div class="wrap">
-    <div class="section-head"><p class="eyebrow">The full set</p><h2 id="tools-title">Ten tools, one place to find them.</h2><p>Open a tool from the sidebar or search for it in the palette. Expand a card for the details.</p></div>
+  <section class="section" id="tools" aria-labelledby="tools-title"><div class="wrap">
+    <div class="section-head"><h2 id="tools-title">The tools</h2><p>A quick look at all ten. Open a card for a short summary.</p><a class="section-link" href="tools.html">Learn more about every tool <span aria-hidden="true">→</span></a></div>
     <div class="tool-group"><p class="group-label">Automate</p><div class="tool-grid"><article class="tool-card" id="autoclicker">
           <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-mouse"/></svg></span><h3>Autoclicker</h3></div>
-          <p>Set the pace. Let Volt do the clicking.</p><details><summary>What it does</summary><p>Choose a rate, repeat a sequence of points, or drag between them. Set a stopping point and limit clicking to a chosen window.</p><a class="shot-link" data-zoom href="img/autoclicker.webp" data-caption="Autoclicker in Volt 0.8">View screenshot <span aria-hidden="true">↗</span></a></details>
+          <p>Clicks for you, at whatever rate you set.</p><details><summary>What it does</summary><p>Choose a rate, repeat a sequence of points, or drag between them. Set a stopping point and limit clicking to a chosen window.</p><a class="learn-link" href="tools.html#autoclicker" aria-label="Learn more about Autoclicker">Learn more <span aria-hidden="true">→</span></a></details>
         </article><article class="tool-card" id="macros">
           <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-play"/></svg></span><h3>Macros</h3></div>
-          <p>Record a task and replay it with a shortcut.</p><details><summary>What it does</summary><p>Record keyboard and mouse input, adjust individual steps, and change the speed or repeat count.</p><a class="shot-link" data-zoom href="img/macros.webp" data-caption="Macros in Volt 0.8">View screenshot <span aria-hidden="true">↗</span></a></details>
+          <p>Record a task and replay it with a shortcut.</p><details><summary>What it does</summary><p>Record keyboard and mouse input, adjust individual steps, and change the speed or repeat count.</p><a class="learn-link" href="tools.html#macros" aria-label="Learn more about Macros">Learn more <span aria-hidden="true">→</span></a></details>
         </article><article class="tool-card" id="snippets">
           <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-keyboard"/></svg></span><h3>Snippets</h3></div>
-          <p>Turn a few characters into a full message.</p><details><summary>What it does</summary><p>Save signatures, addresses and replies. Add the date, time or clipboard text with placeholders.</p><a class="shot-link" data-zoom href="img/snippets.webp" data-caption="Snippets in Volt 0.8">View screenshot <span aria-hidden="true">↗</span></a></details>
+          <p>Turn a few characters into a full message.</p><details><summary>What it does</summary><p>Save signatures, addresses and replies. Add the date, time or clipboard text with placeholders.</p><a class="learn-link" href="tools.html#snippets" aria-label="Learn more about Snippets">Learn more <span aria-hidden="true">→</span></a></details>
         </article></div></div><div class="tool-group"><p class="group-label">Everyday work</p><div class="tool-grid"><article class="tool-card" id="clipboard">
           <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-clipboard"/></svg></span><h3>Clipboard history</h3></div>
-          <p>Find something you copied earlier.</p><details><summary>What it does</summary><p>Search text and images, preview them, and copy them back. Pin the things you use often. Images can also be saved or floated on screen.</p><a class="shot-link" data-zoom href="img/clipboard-light.webp" data-caption="Clipboard history in Volt 0.8">View screenshot <span aria-hidden="true">↗</span></a></details>
+          <p>Find something you copied earlier.</p><details><summary>What it does</summary><p>Search text and images, preview them, and copy them back. Pin the things you use often. Images can also be saved or floated on screen.</p><a class="learn-link" href="tools.html#clipboard" aria-label="Learn more about Clipboard history">Learn more <span aria-hidden="true">→</span></a></details>
         </article><article class="tool-card" id="notes">
           <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-note"/></svg></span><h3>Notes</h3></div>
-          <p>Keep a thought before you forget it.</p><details><summary>What it does</summary><p>Notes save as you type. Search or pin them, or add one from the palette with note: buy milk.</p></details>
+          <p>Quick notes that save as you type.</p><details><summary>What it does</summary><p>Notes save as you type. Search or pin them, or add one from the palette with note: buy milk.</p><a class="learn-link" href="tools.html#notes" aria-label="Learn more about Notes">Learn more <span aria-hidden="true">→</span></a></details>
         </article><article class="tool-card" id="text-tools">
           <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-type"/></svg></span><h3>Text tools</h3></div>
-          <p>Clean up text without opening another app.</p><details><summary>What it does</summary><p>Change case, sort lines, format JSON, encode Base64, or generate a UUID, timestamp or password.</p></details>
+          <p>Clean up text without opening another app.</p><details><summary>What it does</summary><p>Change case, sort lines, format JSON, encode Base64, or generate a UUID, timestamp or password.</p><a class="learn-link" href="tools.html#text-tools" aria-label="Learn more about Text tools">Learn more <span aria-hidden="true">→</span></a></details>
         </article><article class="tool-card" id="timers">
           <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-timer"/></svg></span><h3>Timers</h3></div>
-          <p>Set a timer, an alarm, or start a stopwatch.</p><details><summary>What it does</summary><p>Use a preset or enter a duration like 1h30. Pause, add a minute, and get a notification when time is up.</p></details>
+          <p>Set a timer, an alarm, or start a stopwatch.</p><details><summary>What it does</summary><p>Use a preset or enter a duration like 1h30. Pause, add a minute, and get a notification when time is up.</p><a class="learn-link" href="tools.html#timers" aria-label="Learn more about Timers">Learn more <span aria-hidden="true">→</span></a></details>
         </article></div></div><div class="tool-group"><p class="group-label">Screen tools</p><div class="tool-grid"><article class="tool-card" id="capture">
           <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-camera"/></svg></span><h3>Screen capture</h3></div>
-          <p>Grab a region and keep it within reach.</p><details><summary>What it does</summary><p>Copy a screenshot, save it as a PNG, or pin it above your other windows as a reference.</p><a class="shot-link" data-zoom href="img/capture.webp" data-caption="Screen capture in Volt 0.8">View screenshot <span aria-hidden="true">↗</span></a></details>
+          <p>Capture a region to the clipboard or a PNG.</p><details><summary>What it does</summary><p>Copy a screenshot, save it as a PNG, or pin it above your other windows as a reference.</p><a class="learn-link" href="tools.html#capture" aria-label="Learn more about Screen capture">Learn more <span aria-hidden="true">→</span></a></details>
         </article><article class="tool-card" id="picker">
           <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-pipette"/></svg></span><h3>Colour picker</h3></div>
-          <p>Grab the colour you see on screen.</p><details><summary>What it does</summary><p>Use the pixel magnifier to pick precisely, then copy the colour as HEX, RGB or HSL.</p></details>
+          <p>Pick any colour on your screen.</p><details><summary>What it does</summary><p>Use the pixel magnifier to pick precisely, then copy the colour as HEX, RGB or HSL.</p><a class="learn-link" href="tools.html#picker" aria-label="Learn more about Colour picker">Learn more <span aria-hidden="true">→</span></a></details>
         </article><article class="tool-card" id="nudge">
           <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-move"/></svg></span><h3>Nudge</h3></div>
-          <p>Move a cursor or window by exact pixels.</p><details><summary>What it does</summary><p>Use keyboard shortcuts for small adjustments, jump to saved positions, or snap a window into place.</p></details>
+          <p>Move a cursor or window by exact pixels.</p><details><summary>What it does</summary><p>Use keyboard shortcuts for small adjustments, jump to saved positions, or snap a window into place.</p><a class="learn-link" href="tools.html#nudge" aria-label="Learn more about Nudge">Learn more <span aria-hidden="true">→</span></a></details>
         </article></div></div>
     <details class="shortcut-details" id="hotkeys"><summary>Keyboard shortcuts and controls</summary>
       <p>Change shortcuts in Settings. Volt flags conflicts and, by default, prevents its shortcuts from also triggering actions in the app you're using.</p>
@@ -178,19 +174,26 @@
     </details>
   </div></section>
 
-  <section class="section local-section" id="local" aria-labelledby="local-title"><div class="wrap">
-    <div class="section-head"><h2 id="local-title">Your data stays on your PC.</h2><p>Volt doesn't upload your clipboard, notes or settings. There are no accounts, tracking or cloud sync.</p></div>
-    <div class="local-grid">
-      <article><h3>Keep what you choose</h3><p>Clipboard history stays in memory by default. Pins survive restarts; saving the rest of your history is optional.</p></article>
-      <article><h3>Back up your setup</h3><p>Export settings, macros, snippets and notes as one file. You can also copy the local data folder, including saved images.</p></article>
-      <article><h3>Use it from a USB drive</h3><p>Portable mode keeps Volt's data beside the app. <a href="#portable-help">See how to enable it.</a></p></article>
-    </div>
-    <p class="note"><a href="privacy.html">How your data is stored</a> · <a href="https://github.com/lljzzz/volt">Read the source on GitHub</a></p>
-  </div></section>
-
-  <section class="section band" id="download" aria-labelledby="download-title"><div class="wrap download">
+<section class="section band" id="lightweight" aria-labelledby="perf-title"><div class="wrap perf">
+  <div class="section-head"><h2 id="perf-title">Performance</h2><p>Close the window and Volt stays in the tray. Resource use depends on which tools are running and how much clipboard history you keep.</p></div>
+  <div><div class="table-wrap"><table><caption class="visually-hidden">Volt 0.8 resource use</caption><tbody>
+    <tr><th scope="row">CPU<span class="sub">Idle in the tray</span></th><td>0%</td></tr>
+    <tr><th scope="row">Memory<span class="sub">Task Manager, Memory column</span></th><td>about 53 MB</td></tr>
+    <tr><th scope="row">Download<span class="sub">One EXE</span></th><td>25.4 MB</td></tr>
+  </tbody></table></div><p class="note">Volt 0.8 idle in the tray for 15 seconds with an empty history, both of its processes added together. Copied images add to this while you keep them.</p></div>
+</div></section><section class="section local-section" id="local" aria-labelledby="local-title"><div class="wrap">
+  <div class="section-head"><h2 id="local-title">Your data stays on your PC</h2><p>Volt doesn't upload your clipboard, notes or settings. There are no accounts or cloud sync.</p></div>
+  <div class="local-grid">
+    <article><h3>Keep what you choose</h3><p>Clipboard history stays in memory by default. Pins survive restarts; saving the rest of your history is optional.</p></article>
+    <article><h3>Files you can open</h3><p>Settings and text are stored as JSON. Saved clipboard images are PNGs. You can read, back up or delete them yourself.</p></article>
+    <article><h3>No tracking</h3><p>No analytics, automatic crash reports or update checks. <a href="privacy.html">Read the privacy policy.</a></p></article>
+    <article><h3>Use it from a USB drive</h3><p>Portable mode keeps Volt's data beside the app. <a href="#portable-help">See how to enable it.</a></p></article>
+    <article><h3>Back up your setup</h3><p>Export settings, macros, snippets and notes as one file. Copy the data folder to include saved images too.</p></article>
+    <article><h3>Open source</h3><p>The code is available under the MIT license. <a href="https://github.com/lljzzz/volt">Read it on GitHub.</a></p></article>
+  </div>
+</div></section>  <section class="section band" id="download" aria-labelledby="download-title"><div class="wrap download">
     <div>
-      <div class="section-head"><p class="eyebrow">Get Volt</p><h2 id="download-title">Download. Open. Start using it.</h2><p>One executable, with no installer and no account to create.</p></div>
+      <div class="section-head"><h2 id="download-title">Download Volt</h2><p>One executable, with no installer and no account to create.</p></div>
       <ol class="steps">
         <li><div><p><strong>Download Volt.exe.</strong> Save it somewhere you want to keep the app.</p></div></li>
         <li><div><p><strong>Open it.</strong> Choose a tool or press Ctrl+Alt+Space to search.</p></div></li>
@@ -205,29 +208,66 @@
       <a class="btn btn-primary" href="https://github.com/lljzzz/volt/releases/latest/download/Volt.exe">Download Volt.exe</a>
       <dl class="specs"><dt>Price</dt><dd>Free</dd><dt>Download</dt><dd>25.4 MB · one EXE</dd><dt>System</dt><dd>64-bit Windows 10 / 11</dd><dt>License</dt><dd><a href="https://github.com/lljzzz/volt/blob/main/LICENSE">MIT · open source</a></dd><dt>Signature</dt><dd>Unsigned · <a href="#windows-warning">about the warning</a></dd></dl>
       <div class="download-links"><a href="https://github.com/lljzzz/volt/releases/tag/v0.8">What's new in v0.8</a><a href="https://github.com/lljzzz/volt/releases/download/v0.8/SHA256SUMS.txt">SHA-256 checksum</a><a href="https://github.com/lljzzz/volt/releases">Older versions</a></div>
-      <p class="note">Close the main window and keep using Volt from the tray. Memory and CPU use depend on your active tools and clipboard history.</p>
+
     </aside>
   </div></section>
 
   <section class="section" id="faq" aria-labelledby="faq-title"><div class="wrap faq-layout">
-    <div class="section-head"><h2 id="faq-title">A few common questions.</h2><p>Something else on your mind? <a href="https://github.com/lljzzz/volt/issues">Ask on GitHub.</a></p></div>
+    <div class="section-head"><h2 id="faq-title">Q&amp;A</h2><p>Have another question? <a href="https://github.com/lljzzz/volt/issues">Ask on GitHub.</a></p></div>
     <div class="faq-list">
+      <details><summary>Does Volt send my data anywhere?</summary><p>No. Clipboard history, notes, macros and settings stay on your PC. Volt has no analytics, cloud sync or automatic crash reports. <a href="privacy.html">See what is stored and where.</a></p></details>
+      <details><summary>How can I check the download?</summary><p>Download from the project's GitHub releases, compare the file's SHA-256 checksum, and review the source if you want to inspect the code. Volt 0.8 is unsigned, so Windows may show a warning. <a href="#windows-warning">About that warning.</a></p></details>
+      <details><summary>Why might antivirus flag Volt?</summary><p>The autoclicker, macros and snippets work by simulating keyboard and mouse input, and some security tools flag unsigned apps that do that. Volt has no network code, and <a href="https://github.com/lljzzz/volt">the source is on GitHub</a> if you want to check what it does.</p></details>
       <details><summary>Is Volt really free?</summary><p>Yes. Volt is free and open source under the MIT license. No account or subscription is required.</p></details>
       <details><summary>Does it work in browsers and other apps?</summary><p>Yes. Global shortcuts, text expansion and clipboard tools work across Windows apps. Some games or apps running as administrator may handle simulated input differently.</p></details>
+      <details><summary>Can I change the hotkeys?</summary><p>Yes, all of them, in Settings or on each tool's page. Volt warns you when two hotkeys clash, and you can switch any tool's hotkeys off from the Dashboard.</p></details>
       <details><summary>Can I use macros in a game?</summary><p>Check the game's rules first. Some games prohibit automation and may penalise its use. Volt doesn't bypass those rules or anti-cheat systems.</p></details>
       <details><summary>Does it work on Mac or Linux?</summary><p>No. Volt currently supports 64-bit Windows 10 and 11.</p></details>
       <details><summary>Does closing the window stop Volt?</summary><p>By default, closing the window leaves Volt running in the system tray, so shortcuts and background tools still work. To exit, right-click the tray icon and choose Quit.</p></details>
       <details><summary>How do I report a bug?</summary><p><a href="https://github.com/lljzzz/volt/issues">Open an issue</a> with your Volt version, Windows version, what you were doing and any error message. Don't include private clipboard content or personal data.</p></details>
     </div>
   </div></section>
-</main>
-<footer class="site-footer"><div class="wrap footer-simple">
-  <div><a class="brand" href="#top"><img src="favicon.svg" alt="" width="28" height="28">VOLT</a><p>Everyday Windows tools, together.</p><p class="note">v0.8 · Made by <a href="https://github.com/lljzzz">lljzzz</a></p></div>
-  <nav aria-label="Footer"><a href="https://github.com/lljzzz/volt">Source code</a><a href="https://github.com/lljzzz/volt/releases">Releases</a><a href="https://github.com/lljzzz/volt/issues">Report a problem</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
-</div></footer>
-<dialog id="screenshot-dialog" aria-labelledby="screenshot-title">
+</main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#top" aria-label="Volt home"><img src="favicon.svg" alt="" width="28" height="28">VOLT</a>
+        <p>10 apps in one.<br>Free and open source.</p>
+      </div>
+      <nav aria-labelledby="f-product">
+        <h2 id="f-product">Product</h2>
+        <ul>
+          <li><a href="tools.html">All tools</a></li>
+          <li><a href="#palette">Command palette</a></li>
+        <li><a href="#hotkeys">Hotkeys</a></li>
+          <li><a href="#download">Download</a></li>
+          <li><a href="#faq">Q&amp;A</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-project">
+        <h2 id="f-project">Project</h2>
+        <ul>
+          <li><a href="https://github.com/lljzzz/volt">Source code</a></li>
+          <li><a href="https://github.com/lljzzz/volt/releases">Releases</a></li>
+          <li><a href="https://github.com/lljzzz/volt/issues">Report a problem</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-legal">
+        <h2 id="f-legal">Legal</h2>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="https://github.com/lljzzz/volt/blob/main/LICENSE">MIT License</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>Volt 0.8 · Made by <a href="https://github.com/lljzzz">lljzzz</a></span>
+      <span>Not affiliated with Microsoft. Windows is a trademark of Microsoft Corporation.</span>
+    </div>
+  </div>
+</footer><dialog id="screenshot-dialog" aria-labelledby="screenshot-title">
   <div class="dialog-bar"><p id="screenshot-title">Volt screenshot</p><button type="button" id="close-screenshot" aria-label="Close screenshot">Close <span aria-hidden="true">×</span></button></div>
   <img id="screenshot-image" alt="">
   <p class="dialog-note"><a id="screenshot-original" href="img/appearance-dark-orange.webp" target="_blank" rel="noopener">Open full-size image</a></p>
-</dialog>
-</body></html>
+</dialog></body></html>
