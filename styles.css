@@ -136,6 +136,7 @@ kbd {
 .hero .lede { margin-top: var(--s2); font-size: clamp(1.05rem, 1rem + 0.35vw, 1.2rem); color: #c9cbcf; max-width: 64ch; }
 .hero-actions { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 .hero-meta { margin-top: var(--s2); font-size: 0.9rem; color: var(--muted); }
+.hero-new { margin-top: 6px; font-size: 0.9rem; color: var(--muted); }
 
 .hero { overflow-x: clip; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 9fr) minmax(0, 13fr); gap: var(--s6); align-items: center; }
@@ -234,6 +235,8 @@ figcaption { font-size: 0.88rem; color: var(--muted); }
 .facts strong { color: var(--text); font-weight: 700; }
 .hotkey-line { font-size: 0.92rem; line-height: 2; color: var(--muted); padding-top: 4px; }
 .shot { padding: 12px; background: var(--bg); }
+.shot.light { background: #f3f4f6; border-color: #3a3d42; }
+.feature-shot figcaption { margin-top: 12px; }
 .feature-shot { margin: 0; min-width: 0; }
 .example {
   display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 16px; align-items: baseline;
@@ -258,15 +261,9 @@ figcaption { font-size: 0.88rem; color: var(--muted); }
 @media (max-width: 960px) { .cards.three { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 760px) { .cards.two { grid-template-columns: minmax(0, 1fr); } }
 
-.perf { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--s4) clamp(32px, 5vw, 64px); align-items: end; }
-.perf-detail { grid-column: 1 / -1; }
-.perf-detail .table-wrap { margin-top: 0; }
-.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid var(--line); border-radius: var(--radius-card); background: var(--surface); }
-.stat { padding: clamp(16px, 3vw, 24px); display: grid; gap: 4px; min-width: 0; }
-.stat + .stat { border-left: 1px solid var(--line); }
-.stat .num { font: 700 clamp(2rem, 1.4rem + 2vw, 2.75rem)/1 var(--font-display); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; color: #f2f2f2; }
-.stat .num small { font-size: 0.5em; letter-spacing: 0; margin-left: 3px; color: var(--muted); font-weight: 700; }
-.stat .label { font-size: 0.9rem; color: var(--muted); }
+.perf { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: var(--s4) clamp(32px, 5vw, 64px); align-items: center; }
+.perf .table-wrap { margin-top: 0; }
+.perf td { text-align: right; white-space: nowrap; color: var(--text); font-weight: 700; }
 .table-wrap { overflow-x: auto; margin-top: 16px; border: 1px solid var(--line); border-radius: var(--radius-card); background: var(--surface); }
 .table-wrap:focus-visible { outline-offset: 2px; border-radius: var(--radius-card); }
 table { width: 100%; border-collapse: collapse; font-size: 0.95rem; font-variant-numeric: tabular-nums; }
@@ -277,10 +274,6 @@ tbody th { font-weight: 400; color: #d2d4d7; }
 tbody th .sub { display: block; font-size: 0.85rem; color: var(--muted); margin-top: 2px; }
 .note { margin-top: var(--s2); font-size: 0.88rem; color: var(--muted); }
 @media (max-width: 860px) { .perf { grid-template-columns: minmax(0, 1fr); } }
-@media (max-width: 340px) {
-  .stats { grid-template-columns: minmax(0, 1fr); }
-  .stat + .stat { border-left: 0; border-top: 1px solid var(--line); }
-}
 
 .points { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: clamp(40px, 5vw, 56px); border-top: 1px solid var(--line); }
 .point { padding: var(--s4) var(--s4) var(--s4) 0; display: grid; gap: var(--s1); align-content: start; border-bottom: 1px solid var(--line); min-width: 0; }
@@ -383,11 +376,9 @@ tbody th .sub { display: block; font-size: 0.85rem; color: var(--muted); margin-
   font: 700 clamp(1.5rem, 1rem + 1.7vw, 2.25rem)/1.15 var(--font-display);
   letter-spacing: -0.02em; color: #f2f2f2;
 }
-.tagline em { font-style: normal; color: var(--accent); }
 
 @media (forced-colors: active) {
-  .btn, .skip, .dl-card, .card, .index, .stats, .table-wrap, .callout, .example { border: 1px solid CanvasText; }
+  .btn, .skip, .dl-card, .card, .index, .table-wrap, .callout, .example { border: 1px solid CanvasText; }
   .btn-primary { forced-color-adjust: none; background: ButtonText; color: ButtonFace; }
   .facts li::before, .running::before { background: CanvasText; }
-  .tagline em { color: LinkText; }
 }
