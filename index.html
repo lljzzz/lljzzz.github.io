@@ -73,7 +73,7 @@
           <a class="btn btn-ghost" href="#tools">See every tool</a>
         </div>
         <p class="hero-meta">Windows 10 and 11, 64-bit · about 26 MB · no installer</p>
-        <p class="hero-new">New in 0.8: a light theme and a round of bug fixes. <a href="https://github.com/lljzzz/volt/releases/latest">Release notes</a></p>
+        <p class="hero-new">New in 0.8: images in clipboard history, a light theme and a round of bug fixes. <a href="https://github.com/lljzzz/volt/releases/latest">Release notes</a></p>
       </div>
 
       <div class="hero-visual">
@@ -247,18 +247,19 @@
           <article class="feature flip" id="clipboard" aria-labelledby="t-clipboard">
             <div class="feature-copy">
               <div class="tool-title"><span class="tool-icon"><svg class="icon" aria-hidden="true"><use href="#i-clipboard"/></svg></span><h4 id="t-clipboard">Clipboard history</h4></div>
-              <p class="lede">Everything you copy, searchable, with pins for the things you paste often.</p>
+              <p class="lede">Everything you copy, text and images, searchable, with pins for the things you paste often.</p>
               <ul class="facts">
-                <li>Pins survive restarts. The full history can too, if you want.</li>
+                <li>Pins survive restarts. Optional history saving keeps text and unpinned images up to 12 MB each.</li>
+                <li>Copied images and screenshots show up with thumbnails. Save one as a PNG or float it on top of your other windows.</li>
                 <li>Skips copies that password managers mark as private.</li>
-                <li>Copy any entry as UPPER, camelCase, Base64, pretty JSON and 21 more formats.</li>
+                <li>Copy text as UPPER, camelCase, Base64, pretty JSON and 21 more formats.</li>
               </ul>
               <p class="hotkey-line"><span class="keys"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>V</kbd></span> pastes as plain text.</p>
             </div>
             <figure class="feature-shot">
               <div class="window shot light"><img src="img/clipboard-light.webp" width="1400" height="758" loading="lazy"
-                alt="Volt's Clipboard page in the light theme, with a searchable history, a pinned color code, a full-text preview and Copy as buttons for UPPER, lower, Title, Trim and One line."></div>
-              <figcaption>The light theme, new in 0.8.</figcaption>
+                alt="Volt's Clipboard page in the light theme, with a copied chart selected and shown in the preview, text entries below it, a pinned color code and buttons to copy, pin, delete, save as PNG or float the image."></div>
+              <figcaption>Image history and the light theme, both new in 0.8.</figcaption>
             </figure>
           </article>
         </div>
@@ -323,7 +324,7 @@
         <p>Volt sees what you copy and type: your clipboard, your notes, snippets with your address in them. None of it ever leaves your computer.</p>
       </div>
       <div class="points">
-        <div class="point"><svg class="icon" aria-hidden="true"><use href="#i-folder"/></svg><h3>Files you can open</h3><p>Everything is saved as plain JSON in <code>%APPDATA%\Volt</code>. Read it, back it up or delete it.</p></div>
+        <div class="point"><svg class="icon" aria-hidden="true"><use href="#i-folder"/></svg><h3>Files you can open</h3><p>Settings and text are saved as JSON in <code>%APPDATA%\Volt</code>. Pinned and remembered images are PNGs. Read, back up or delete your files.</p></div>
         <div class="point"><svg class="icon" aria-hidden="true"><use href="#i-wifi-off"/></svg><h3>Nothing to send it with</h3><p>Volt has no network code. No telemetry, no update checks.</p></div>
         <div class="point"><svg class="icon" aria-hidden="true"><use href="#i-user-x"/></svg><h3>No account</h3><p>Nothing to sign up for, nothing to log in to.</p></div>
         <div class="point"><svg class="icon" aria-hidden="true"><use href="#i-usb"/></svg><h3>Take it with you</h3><p>Put an empty file named <code>portable</code> next to <code>Volt.exe</code> and everything lives in one folder. Great for a USB stick.</p></div>
